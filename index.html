@@ -34,7 +34,14 @@ title: TechTips
 <p>Many people ask me about what technology they should buy, when they need a laptop, TV or phone, amongst other things. I am going to keen my recommendations here.
 <a href="mailto:tr@thomasr.co.uk">tr@thomasr.co.uk</a></p>
       <br>
-      {{site.posts}}
+
+<ul>
+{% for post in site.posts %}
+  <li class="post">
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  </li>
+{% endfor %}
+</ul>
 
       </section>
       <footer>
